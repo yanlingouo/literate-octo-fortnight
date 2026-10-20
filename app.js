@@ -17,7 +17,7 @@ function sendPortal(portal) {
     for (const [name, value] of Object.entries(data)) { const input = document.createElement('input'); input.name = name; input.value = value; form.append(input); }
     const cleanup = () => { clearTimeout(timer); window.removeEventListener('message', receive); form.remove(); iframe.remove(); };
     const receive = event => {
-      if (!/^https:\/\/[a-z0-9-]+\.script\.googleusercontent\.com$/.test(event.origin) && event.origin !== 'https://script.google.com' && event.origin !== 'https://script.googleusercontent.com') return;
+      if (!/^https:\/\/[a-z0-9-]+-script\.googleusercontent\.com$/.test(event.origin) && event.origin !== 'https://script.google.com' && event.origin !== 'https://script.googleusercontent.com') return;
       if (!event.data || event.data.nonce !== nonce || event.data.type !== 'portal-result') return;
       cleanup(); resolve(event.data);
     };
