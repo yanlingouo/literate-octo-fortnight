@@ -5,7 +5,7 @@ const SETTINGS = {
   portalHeader: '塔連結',
   ledgerName: '_Portal登記紀錄',
   // 必填：GitHub Pages 的 origin，不含專案路徑，例如 https://yourname.github.io
-  allowedOrigins: ['https://yanlingouo.github.io'],,
+  allowedOrigins: ['https://yanlingouo.github.io'],
   // 通常留空；會自動使用試算表所連結的表單。必要時填「編輯表單」的完整網址。
   formEditUrl: ''
 };
